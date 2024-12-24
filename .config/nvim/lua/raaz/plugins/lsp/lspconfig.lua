@@ -72,6 +72,15 @@ return {
 				})
 			end,
 
+			["rust_analyzer"] = function()
+				lspconfig["pyright"].setup({
+					-- on_attach = on_attach,
+					capabilities = capabilities,
+					filetypes = { "rust" },
+					root_dir = util.root_pattern("Cargo.toml", ".git"),
+				})
+			end,
+
 			["pyright"] = function()
 				lspconfig["pyright"].setup({
 					-- on_attach = on_attach,
