@@ -28,6 +28,7 @@ return {
 			automatic_installation = true,
 			-- list of servers for mason to install
 			ensure_installed = {
+				"clangd",
 				"ts_ls",
 				"html",
 				"cssls",
@@ -36,6 +37,7 @@ return {
 				"gopls",
 				"pyright",
 				"rust_analyzer",
+				-- "templ",
 			},
 		})
 

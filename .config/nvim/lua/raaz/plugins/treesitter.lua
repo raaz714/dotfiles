@@ -50,6 +50,7 @@ return {
 				"go",
 				"python",
 				"rust",
+				-- "templ",
 			},
 			incremental_selection = {
 				enable = true,

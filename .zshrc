@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 . /etc/profile.d/vte.sh
+export PATH=$(systemd-path user-binaries):$PATH
 
 alias ls="eza --icons -h -l"
 alias tree="eza --icons --tree"
@@ -115,6 +116,7 @@ alias vim="nvim"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 alias fzfp="fzf --preview \"batcat --style=numbers --color=always --line-range :500 {}\""
+alias dl="aria2c -s16 -x16"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -145,3 +147,7 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "/home/raaz/.gvm/scripts/gvm" ]] && source "/home/raaz/.gvm/scripts/gvm"
 
 eval "$(zoxide init --cmd cd zsh)"
+
+# butnnel path
+export PATH="/home/raaz/.btunnel/bin:$PATH"
+

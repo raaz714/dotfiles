@@ -27,6 +27,7 @@ set cursorpreviewfmt "\033[7;2m"
 set icons
 
 set drawbox
+set roundbox
 set period 1
 set info size
 set dircounts
