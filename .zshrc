@@ -111,27 +111,13 @@ export PATH=$(systemd-path user-binaries):$PATH
 alias ls="eza --icons -h -l"
 alias tree="eza --icons --tree"
 alias cat='bat --theme="Catppuccin Macchiato"'
+alias fzf='fzf --preview "fzf-preview.sh {}"'
 alias vim="nvim"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 alias fzfp="fzf --preview \"batcat --style=numbers --color=always --line-range :500 {}\""
 alias dl="aria2c -s16 -x16"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/raaz/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/raaz/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/raaz/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/raaz/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
@@ -151,3 +137,12 @@ eval "$(zoxide init --cmd cd zsh)"
 # butnnel path
 export PATH="/home/raaz/.btunnel/bin:$PATH"
 
+export FLYCTL_INSTALL="/home/raaz/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/home/raaz/.bun/_bun" ] && source "/home/raaz/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
