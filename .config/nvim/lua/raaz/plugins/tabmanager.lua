@@ -23,9 +23,22 @@ return {
 
 	config = function()
 		require("barbar").setup({
-			animation = false,
+			animation = true,
 			icons = {
 				preset = "powerline",
+				gitsigns = {
+					added = { enabled = true, icon = "+" },
+					changed = { enabled = true, icon = "~" },
+					deleted = { enabled = true, icon = "-" },
+				},
+				filetype = {
+					-- Sets the icon's highlight group.
+					-- If false, will use nvim-web-devicons colors
+					custom_colors = false,
+
+					-- Requires `nvim-web-devicons` if `true`
+					enabled = true,
+				},
 			},
 			sidebar_filetypes = {
 				NvimTree = true, -- default event and text
