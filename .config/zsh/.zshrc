@@ -75,7 +75,7 @@ ZSH_THEME="TheOne"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git tmux sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
+plugins=( git sudo tmux zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -153,3 +153,6 @@ export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 export AVANTE_GEMINI_API_KEY=AIzaSyBHV8GWHs9dyU6iZEhKQ3bwWrzABjsaavA
 export GEMINI_API_KEY=AIzaSyBHV8GWHs9dyU6iZEhKQ3bwWrzABjsaavA
+
+# opencode
+export PATH=/home/raaz/.opencode/bin:$PATH
