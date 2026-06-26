@@ -96,7 +96,7 @@ select_device() {
 		"--border=sharp"
 		"--border-label= Bluetooth Devices "
 		"--cycle"
-		"--ghost=Search"
+		# "--ghost=Search"
 		"--header=$header"
 		"--height=~100%"
 		"--highlight-line"

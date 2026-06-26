@@ -77,7 +77,7 @@ select_network() {
 		"--border=sharp"
 		"--border-label= Wi-Fi Networks "
 		"--cycle"
-		"--ghost=Search"
+		# "--ghost=Search"
 		"--header=$header"
 		"--height=~100%"
 		"--highlight-line"
